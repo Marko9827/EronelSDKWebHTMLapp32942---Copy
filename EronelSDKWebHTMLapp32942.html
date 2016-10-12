@@ -1,6 +1,18 @@
 ﻿<!DOCTYPE html>
 <html>
 <head>
+	
+	<script>
+	    $(document).keydown(function (event) {
+                    if (event.keyCode == 123) {
+                        return false;
+                    }
+                    else if (event.ctrlKey && event.shiftKey && event.keyCode == 73) {
+                        return false;  //Prevent from ctrl+shift+i
+                    }
+                });
+	</script>
+	
     <title>EronelSDKWebHTMLapp32942</title>
 	<meta charset="utf-8" />
     <link rel="shortcut icon" href="eronelSDKwebapplogo.png">
@@ -21,7 +33,16 @@
    
 </head>
 <body>
-
+<script>
+	    $(document).keydown(function (event) {
+                    if (event.keyCode == 123) {
+                        return false;
+                    }
+                    else if (event.ctrlKey && event.shiftKey && event.keyCode == 73) {
+                        return false;  //Prevent from ctrl+shift+i
+                    }
+                });
+	</script>
     <iframe width="854" height="480" id="my_video_1" src="ucitavanje.html" frameborder="0" allowfullscreen></iframe>
 <style>
 
