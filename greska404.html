@@ -198,6 +198,26 @@ transform: rotate(-20deg);
 }
 </style></head>
 <body oncontextmenu='return false' ondragstart='return false' onselectstart='return false' >
+  <script>
+    document.onkeypress = function(event) {
+    event = (event || window.event);
+    if (event.keyCode == 123) {
+        return false;
+    }
+}
+document.onmousedown = function(event) {
+    event = (event || window.event);
+    if (event.keyCode == 123) {
+        return false;
+    }
+}
+document.onkeydown = function(event) {
+    event = (event || window.event);
+    if (event.keyCode == 123) {
+        return false;
+    }
+}
+  </script>
 <div class="cont_principal cont_error_active">
 <div class="cont_error">
   
