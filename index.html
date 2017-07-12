@@ -95,6 +95,46 @@
 	</style>
 	
 </head>
+	
+	
+	
+	<script language="JavaScript" type="text/javascript">
+<!--
+var showContextMenu=false;
+var sTestEventType='mousedown';
+
+function handleMouseEvent(e) {
+ var evt = (e==null ? event:e);
+ var clickType = 'LEFT';
+
+ if (evt.type!=sTestEventType) return true;
+ if (evt.which) { 
+  
+  if (evt.which==2) clickType='MIDDLE';
+ }
+ else if (evt.button) {
+ 
+  if (evt.button==4) clickType='MIDDLE';
+ }
+
+ // Make sure hyperlinks (A tags) still work!
+ if (evt.target     && evt.target.tagName     && evt.target.tagName.toLowerCase()=="a")     return true;
+ if (evt.srcElement && evt.srcElement.tagName && evt.srcElement.tagName.toLowerCase()=="a") return true;
+
+ alert(evt.type+': '+clickType+' button!');
+ return true;
+}
+
+document.onmousedown = handleMouseEvent;
+document.onmouseup   = handleMouseEvent;
+document.onclick     = handleMouseEvent;
+
+// NOTE: document.captureEvents is obsolete (NS4.x)
+if (document.layers) document.captureEvents(Event.MOUSEDOWN);
+
+//-->
+</script>
+	
 <body class="documenter-project-oxygen"  oncontextmenu='return false' ondragstart='return false' onselectstart='return false'>
 	
 	
