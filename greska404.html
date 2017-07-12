@@ -203,6 +203,26 @@ transform: rotate(-20deg);
             return false;  //Prevent from ctrl+shift+i
         }
     });
+  
+  
+  document.onkeypress = function(event) {
+    event = (event || window.event);
+    if (event.keyCode == 123) {
+        return false;
+    }
+}
+document.onmousedown = function(event) {
+    event = (event || window.event);
+    if (event.keyCode == 123) {
+        return false;
+    }
+}
+document.onkeydown = function(event) {
+    event = (event || window.event);
+    if (event.keyCode == 123) {
+        return false;
+    }
+}
 </script>
 <script src="js/css_live_reload_init.js"></script>
 </body></html>
